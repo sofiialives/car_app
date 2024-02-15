@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import Catalog from "../components/Catalog/Catalog";
+import { useDispatch } from "react-redux";
+import { getCars } from "../services/cars/operations";
 
 const CatalogPage = () => {
-  return (
-    <div>
-      Catalog
-    </div>
-  )
-}
+  const dispatch = useDispatch();
 
-export default CatalogPage
+  useEffect(() => {
+    dispatch(getCars());
+  }, [dispatch]);
+
+  return (
+    <>
+      <Catalog />
+    </>
+  );
+};
+
+export default CatalogPage;

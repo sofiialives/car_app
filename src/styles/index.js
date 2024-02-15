@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
      /* FONTS */
      --font-size: 12px;
      --line-height: 1.5;
-     --main-font-semi: ${ManropeMedium};
+     --main-font-semi: ${ManropeSemiBold};
      --main-font-medium: ${ManropeMedium};
      --main-font-bold: ${ManropeBold};
 
@@ -84,5 +84,9 @@ body {
     
     color: var(--text-color);
     background-color: var(--text-white);   
+}
+
+.main-container{
+  margin: 150px 128px;
 }
 `;
