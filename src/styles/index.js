@@ -27,14 +27,16 @@ export const GlobalStyle = createGlobalStyle`
      }
 
       /* COLORS */
-      --text-color: #12141780;
+      --text-color: rgba(18, 20, 23, 0.5);
       --text-black: #121417;
       --text-blue: #3470FF;
       --text-white: #FFFFFF;
       --text-grey: #8A8A89;
       --violet-bg: #0B44CD;
       --input-color: #F7F7FB;
-      --backdrop-modal: rgba(18, 20, 23, 0.5)
+      --border-line: rgba(18, 20, 23, 0.1);
+      --button-color: #F9F9F9;
+      --condition-color: #363535
 }
 /* RESET STYLES */
 a {

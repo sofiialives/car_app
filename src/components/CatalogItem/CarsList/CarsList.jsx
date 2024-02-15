@@ -1,20 +1,18 @@
 import React from "react";
 import { CarsListStyled } from "./CarsList.styled";
 
-const CarsList = ({ year, make, model, rentalPrice }) => {
+const CarsList = ({ car}) => {
   return (
-    <div>
-      <CarsListStyled>
-        <li className="item">
-          <p className="text">
-            {make} <span className="span">{model}</span>, {year}
-          </p>
-        </li>
-        <li>
-          <p className="text">{rentalPrice}</p>
-        </li>
-      </CarsListStyled>
-    </div>
+    <CarsListStyled>
+      <li className="item">
+        <p className="text">
+          {car.make} <span className="span">{car.model}</span>, {car.year}
+        </p>
+      </li>
+      <li>
+        <p className="text">{car.rentalPrice}</p>
+      </li>
+    </CarsListStyled>
   );
 };
 

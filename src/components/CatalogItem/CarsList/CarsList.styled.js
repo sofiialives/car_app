@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CarsListStyled = styled.ul`
   display: flex;
+  margin-bottom: 8px;
 
   .item {
     margin-right: auto;

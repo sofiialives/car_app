@@ -10,6 +10,12 @@ export const StyledButton = styled.button`
   background-color: var(--text-blue);
   padding: 12px 99.5px;
   border-radius: 12px;
-  margin-top: 28px;
+  margin-top: 24px;
   cursor: pointer;
+  transition: background-color 300ms ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--violet-bg);
+  }
 `;

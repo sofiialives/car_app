@@ -26,7 +26,7 @@ const Modal = ({ setVisible, children }) => {
   return (
     <Backdrop onClick={handleBackdropClick}>
       <ModalContent>
-        <button onClick={() => setVisible(false)}>
+        <button onClick={() => setVisible(false)} className="modal-btn">
           <Icon className="modal-icon" id="close" />
         </button>
         {children}
