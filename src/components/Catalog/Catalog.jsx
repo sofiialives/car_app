@@ -10,31 +10,9 @@ const Catalog = () => {
   return (
     <section className="main-container">
       <CatalogList>
-        {cars.map(
-          ({
-            id,
-            img,
-            year,
-            make,
-            model,
-            rentalPrice,
-            type,
-            rentalCompany,
-            address,
-          }) => (
-            <CatalogItem
-              key={id}
-              img={img}
-              year={year}
-              make={make}
-              model={model}
-              rentalCompany={rentalCompany}
-              rentalPrice={rentalPrice}
-              type={type}
-              address={address}
-            />
-          )
-        )}
+        {cars.map((car) => (
+          <CatalogItem car={car} />
+        ))}
       </CatalogList>
     </section>
   );

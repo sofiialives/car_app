@@ -1,5 +1,5 @@
 import React from "react";
-import icons from "../components/Icon";
+import icons from "../assets/icons/icons.svg";
 
 const Icon = ({ className, id }) => {
   return (
@@ -10,4 +10,3 @@ const Icon = ({ className, id }) => {
 };
 
 export default Icon;
-
