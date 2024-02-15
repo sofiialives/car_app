@@ -21,6 +21,7 @@ const Catalog = () => {
             type,
             rentalCompany,
             address,
+            description
           }) => (
             <CatalogItem
               key={id}
@@ -32,6 +33,7 @@ const Catalog = () => {
               rentalPrice={rentalPrice}
               type={type}
               address={address}
+              description={description}
             />
           )
         )}

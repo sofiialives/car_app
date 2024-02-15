@@ -11,4 +11,5 @@ export const StyledButton = styled.button`
   padding: 12px 99.5px;
   border-radius: 12px;
   margin-top: 28px;
+  cursor: pointer;
 `;

@@ -34,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
       --text-grey: #8A8A89;
       --violet-bg: #0B44CD;
       --input-color: #F7F7FB;
+      --backdrop-modal: rgba(18, 20, 23, 0.5)
 }
 /* RESET STYLES */
 a {
