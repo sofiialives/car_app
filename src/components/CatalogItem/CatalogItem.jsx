@@ -6,7 +6,7 @@ import Modal from "../Modal/Modal";
 import CatalogModal from "../CatalogModal/CatalogModal";
 import DescrCar from "./DescrCar/DescrCar";
 
-const CatalogItem = ({ car }) => {
+const CatalogItem = ({ car, isFav, add, remove }) => {
   const [visible, setVisible] = useState(false);
   const splitted = car.address.split(",");
   const city = splitted[1];
@@ -30,9 +30,16 @@ const CatalogItem = ({ car }) => {
     )} ${lastWord}`;
   });
   const rental = car.rentalConditions.split("\n");
+
   return (
     <li>
-      <ImageDiv img={car.img} />
+      <ImageDiv
+        img={car.img}
+        car={car}
+        remove={remove}
+        add={add}
+        isFav={isFav}
+      />
       <CarsList car={car} />
       <DescrCar
         city={city}
