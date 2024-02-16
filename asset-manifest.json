@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/car_app/static/css/main.e6c13ad2.css",
+    "main.js": "/car_app/static/js/main.cf0a5209.js",
+    "static/js/532.03db7cda.chunk.js": "/car_app/static/js/532.03db7cda.chunk.js",
+    "static/js/748.6ab66de2.chunk.js": "/car_app/static/js/748.6ab66de2.chunk.js",
+    "static/js/40.0421178d.chunk.js": "/car_app/static/js/40.0421178d.chunk.js",
+    "static/media/Manrope-SemiBold.ttf": "/car_app/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
+    "static/media/Manrope-Medium.ttf": "/car_app/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
+    "static/media/Manrope-Bold.ttf": "/car_app/static/media/Manrope-Bold.47f6d7143da9d8c0e480.ttf",
+    "static/media/icons.svg": "/car_app/static/media/icons.d1f47a74e101645bd2941374be1ac900.svg",
+    "index.html": "/car_app/index.html",
+    "main.e6c13ad2.css.map": "/car_app/static/css/main.e6c13ad2.css.map",
+    "main.cf0a5209.js.map": "/car_app/static/js/main.cf0a5209.js.map",
+    "532.03db7cda.chunk.js.map": "/car_app/static/js/532.03db7cda.chunk.js.map",
+    "748.6ab66de2.chunk.js.map": "/car_app/static/js/748.6ab66de2.chunk.js.map",
+    "40.0421178d.chunk.js.map": "/car_app/static/js/40.0421178d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.cf0a5209.js"
+  ]
+}
