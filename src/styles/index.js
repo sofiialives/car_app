@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
      /* FONTS */
      --font-size: 12px;
      --line-height: 1.5;
-     --main-font-semi: ${ManropeMedium};
+     --main-font-semi: ${ManropeSemiBold};
      --main-font-medium: ${ManropeMedium};
      --main-font-bold: ${ManropeBold};
 
@@ -27,13 +27,16 @@ export const GlobalStyle = createGlobalStyle`
      }
 
       /* COLORS */
-      --text-color: #12141780;
+      --text-color: rgba(18, 20, 23, 0.5);
       --text-black: #121417;
       --text-blue: #3470FF;
       --text-white: #FFFFFF;
       --text-grey: #8A8A89;
       --violet-bg: #0B44CD;
       --input-color: #F7F7FB;
+      --border-line: rgba(18, 20, 23, 0.1);
+      --button-color: #F9F9F9;
+      --condition-color: #363535
 }
 /* RESET STYLES */
 a {
@@ -84,5 +87,9 @@ body {
     
     color: var(--text-color);
     background-color: var(--text-white);   
+}
+
+.main-container{
+  margin: 150px 128px;
 }
 `;
