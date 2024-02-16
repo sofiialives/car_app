@@ -18,7 +18,13 @@ const CatalogItem = ({ car }) => {
     )} ${lastWord}`;
   });
   const accessory = car.accessories.map((item) => {
-    const [firstWord, lastWord] = item.split(" ").slice(-2);
+    const words = item.split(" ");
+
+    if (words.length === 1) {
+      return item;
+    }
+
+    const [firstWord, lastWord] = words.slice(-2);
     return `${firstWord.charAt(0).toUpperCase()}${firstWord.slice(
       1
     )} ${lastWord}`;

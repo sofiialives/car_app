@@ -1,14 +1,15 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "../pages/Layout";
+import Loader from "./Loader/Loader";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
-const CatalogPage = lazy(() => import("../pages/CatalogPage"));
+const CatalogPage = lazy(() => import("../pages/CatalogPage/CatalogPage"));
 const FavoritesPage = lazy(() => import("../pages/FavoritesPage"));
 
 function App() {
   return (
-    <Suspense fallback="loading...">
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={<HomePage />} />
