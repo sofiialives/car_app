@@ -27,6 +27,11 @@ export const ImageDivStyled = styled.div`
     }
   }
 
+  .active {
+    stroke: var(--text-blue);
+    fill: var(--text-blue);
+  }
+
   .image {
     width: 100%;
     height: 100%;

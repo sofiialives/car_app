@@ -29,5 +29,11 @@ export const ModalContent = styled.div`
     right: 16px;
     stroke: var(--text-black);
     cursor: pointer;
+    transition: transform 600ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: rotate(180deg);
+    }
   }
 `;

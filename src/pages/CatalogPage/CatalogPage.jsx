@@ -1,10 +1,10 @@
-// CatalogPage.jsx
 import React, { useEffect, useState } from "react";
 import Catalog from "../../components/CatalogList/Catalog";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getCars } from "../../services/cars/operations";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import { CatalogWrapper } from "./CatalogPage.styled";
+import { selectCars } from "../../services/cars/selectors";
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
@@ -18,10 +18,12 @@ const CatalogPage = () => {
     dispatch(getCars(page));
   }, [dispatch, page]);
 
+  const cars = useSelector(selectCars);
+  const endPage = cars.length > 0;
   return (
     <CatalogWrapper className="main-container">
       <Catalog />
-      <LoadMore handleClick={handleClick} />
+      {endPage && <LoadMore handleClick={handleClick} />}
     </CatalogWrapper>
   );
 };
