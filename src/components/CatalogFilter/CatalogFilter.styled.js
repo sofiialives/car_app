@@ -76,3 +76,13 @@ export const InputStyled = styled.input`
     padding: 0;
   }
 `;
+
+export const WrapperInput = styled.div`
+  position: relative;
+
+  .icon-down {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+`;

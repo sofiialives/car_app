@@ -8,7 +8,9 @@ import { selectCars } from "../../services/cars/selectors";
 import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 
 const CatalogPage = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(() => {
+    return localStorage.getItem("query") || "";
+  });
   const cars = useSelector(selectCars);
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
@@ -18,6 +20,7 @@ const CatalogPage = () => {
   };
 
   useEffect(() => {
+    localStorage.setItem("query", query);
     dispatch(getCars({ query, page }));
   }, [dispatch, page, query]);
 
@@ -25,7 +28,7 @@ const CatalogPage = () => {
   return (
     <CatalogWrapper className="main-container">
       <CatalogFilter setQuery={setQuery} />
-      <Catalog query={query} />
+      <Catalog query={query} cars={cars} />
       {endPage && <LoadMore handleClick={handleClick} />}
     </CatalogWrapper>
   );
