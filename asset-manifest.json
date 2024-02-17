@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/car_app/static/css/main.e6c13ad2.css",
-    "main.js": "/car_app/static/js/main.8a969a6f.js",
+    "main.js": "/car_app/static/js/main.d955355c.js",
     "static/js/532.03db7cda.chunk.js": "/car_app/static/js/532.03db7cda.chunk.js",
-    "static/js/800.14556df2.chunk.js": "/car_app/static/js/800.14556df2.chunk.js",
-    "static/js/512.81fc4275.chunk.js": "/car_app/static/js/512.81fc4275.chunk.js",
+    "static/js/800.bdef7079.chunk.js": "/car_app/static/js/800.bdef7079.chunk.js",
+    "static/js/512.f4691ec1.chunk.js": "/car_app/static/js/512.f4691ec1.chunk.js",
     "static/media/Manrope-SemiBold.ttf": "/car_app/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
     "static/media/Manrope-Medium.ttf": "/car_app/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Bold.ttf": "/car_app/static/media/Manrope-Bold.47f6d7143da9d8c0e480.ttf",
-    "static/media/icons.svg": "/car_app/static/media/icons.d1f47a74e101645bd2941374be1ac900.svg",
+    "static/media/icons.svg": "/car_app/static/media/icons.2d09a50f6e0055153ecbf3cd0538acd3.svg",
     "index.html": "/car_app/index.html",
     "main.e6c13ad2.css.map": "/car_app/static/css/main.e6c13ad2.css.map",
-    "main.8a969a6f.js.map": "/car_app/static/js/main.8a969a6f.js.map",
+    "main.d955355c.js.map": "/car_app/static/js/main.d955355c.js.map",
     "532.03db7cda.chunk.js.map": "/car_app/static/js/532.03db7cda.chunk.js.map",
-    "800.14556df2.chunk.js.map": "/car_app/static/js/800.14556df2.chunk.js.map",
-    "512.81fc4275.chunk.js.map": "/car_app/static/js/512.81fc4275.chunk.js.map"
+    "800.bdef7079.chunk.js.map": "/car_app/static/js/800.bdef7079.chunk.js.map",
+    "512.f4691ec1.chunk.js.map": "/car_app/static/js/512.f4691ec1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.8a969a6f.js"
+    "static/js/main.d955355c.js"
   ]
 }
