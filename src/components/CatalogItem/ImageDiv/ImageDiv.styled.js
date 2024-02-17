@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ImageDivStyled = styled.div`
   position: relative;
-  width: 274px;
+  width: 100%;
   height: 268px;
   overflow: hidden;
   border-radius: 14px;
@@ -25,6 +25,11 @@ export const ImageDivStyled = styled.div`
       fill: var(--text-blue);
       transform: scale(1.3);
     }
+  }
+
+  .active {
+    stroke: var(--text-blue);
+    fill: var(--text-blue);
   }
 
   .image {

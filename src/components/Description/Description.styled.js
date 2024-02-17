@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const DescrList = styled.ul`
   display: flex;
-  margin-bottom: ${({ isCondition }) => (isCondition ? "8px" : "4px")};
-  padding: 0; /* Забираємо внутрішній відступ списку */
-  list-style: none; /* Приховуємо стандартні маркери списку */
+  gap: ${({ isCondition }) => (isCondition ? "8px" : "12px")};
+  row-gap: ${({ isCondition }) => (isCondition ? "8px" : "4px")};
+  flex-wrap: wrap;
 `;
 
 export const DescrLi = styled.li`
@@ -20,7 +20,7 @@ export const DescrLi = styled.li`
     height: 16px;
   }
 
-  span {
+  p {
     ${({ isCondition }) =>
       isCondition &&
       `
@@ -29,9 +29,5 @@ export const DescrLi = styled.li`
         border-radius: 35px;
         color: #363535;
       `}
-  }
-
-  &:not(:first-child) {
-    margin-left: ${({ isCondition }) => (isCondition ? "8px" : "12px")};
   }
 `;

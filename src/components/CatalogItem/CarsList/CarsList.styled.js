@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CarsListStyled = styled.ul`
+export const CarsListStyled = styled.div`
   display: flex;
   margin-bottom: 8px;
 
