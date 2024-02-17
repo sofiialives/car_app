@@ -9,8 +9,14 @@ import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 
 const CatalogPage = () => {
   const cars = useSelector(selectCars);
+  const [marks, setMarks] = useState("");
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
+
+  const handleMarks = (selected) => {
+    const filtered = cars?.filter((item) => item.make === selected);
+    setMarks(filtered);
+  };
 
   const handleClick = () => {
     setPage((prev) => prev + 1);
@@ -23,8 +29,8 @@ const CatalogPage = () => {
   const endPage = cars.length > 0;
   return (
     <CatalogWrapper className="main-container">
-      <CatalogFilter />
-      <Catalog />
+      <CatalogFilter handleMarks={handleMarks} />
+      <Catalog cars={marks} />
       {endPage && <LoadMore handleClick={handleClick} />}
     </CatalogWrapper>
   );
