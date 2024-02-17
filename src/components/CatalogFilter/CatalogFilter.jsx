@@ -7,7 +7,7 @@ import {
   SelectorStyled,
 } from "./CatalogFilter.styled";
 
-const CatalogFilter = ({ handleMarks }) => {
+const CatalogFilter = ({ setQuery }) => {
   const makeOptions = marks.map((car, index) => (
     <option key={index} value={car} className="car-option">
       {car}
@@ -16,8 +16,8 @@ const CatalogFilter = ({ handleMarks }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const selectedMake = e.target.elements.make.value;
-    handleMarks(selectedMake);
+    const selectedMake = e.target.make.value;
+    setQuery(selectedMake);
   };
   return (
     <FormStyled onSubmit={handleSearch}>

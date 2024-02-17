@@ -5,6 +5,7 @@ const initialState = {
   items: [],
   isLoading: false,
   error: null,
+  filter: "",
 };
 
 const handlePending = (state) => {
@@ -32,5 +33,5 @@ const carsSlice = createSlice({
       .addCase(getCars.rejected, handleRejected),
 });
 
-export const { setCars } = carsSlice.actions;
+export const { setFilter } = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;
