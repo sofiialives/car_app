@@ -18,17 +18,36 @@ const CatalogFilter = ({ setQuery }) => {
     e.preventDefault();
     const selectedMake = e.target.make.value;
     setQuery(selectedMake);
+    localStorage.setItem("selector", selectedMake);
   };
+
+  const priceOptions = Array.from({ length: 80 }, (_, index) => (
+    <option key={index} value={(index + 1) * 10} className="car-option">
+      {((index + 1) * 10).toString()}
+    </option>
+  ));
+
   return (
     <FormStyled onSubmit={handleSearch}>
       <LabelStyled>
         <p>Car brand</p>
-        <SelectorStyled name="make">{makeOptions}</SelectorStyled>
+        <SelectorStyled
+          name="make"
+          defaultValue={localStorage.getItem("selector") || ""}
+        >
+          <option value="" className="car-option">
+            Enter the text
+          </option>
+          {makeOptions}
+        </SelectorStyled>
       </LabelStyled>
       <LabelStyled>
-        <p>Price/ 1 hour</p>
-        <SelectorStyled className="input-no-border-radius">
-          <option value="">To $</option>
+        <p>Price / 1 hour</p>
+        <SelectorStyled>
+          <option value="" className="car-option">
+            To $
+          </option>
+          {priceOptions}
         </SelectorStyled>
       </LabelStyled>
       <LabelStyled>

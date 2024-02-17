@@ -1,13 +1,9 @@
-// Catalog.jsx
-import React, { useEffect, useMemo, useState } from "react";
-import { useSelector } from "react-redux";
-import { selectCars } from "../../services/cars/selectors";
+import React, { useEffect, useState } from "react";
 import CatalogItem from "../CatalogItem/CatalogItem";
 import { CatalogList } from "./Catalog.styled";
 import { useFavorite } from "../../utils/useFavorite";
 
-const Catalog = ({ query }) => {
-  const cars = useSelector(selectCars);
+const Catalog = ({ query, cars }) => {
   const [newCars, setNewCars] = useState([]);
 
   const storedFavorite = localStorage.getItem("favorite");
@@ -16,8 +12,15 @@ const Catalog = ({ query }) => {
     useFavorite(initialFavorite);
 
   useEffect(() => {
-    setNewCars((prev) => [...prev, ...cars]);
-  }, [cars]);
+    if (cars && query !== "") {
+      const filteredCars = cars.filter(({ make }) =>
+        make.toLowerCase().includes(query.toLowerCase())
+      );
+      setNewCars(filteredCars);
+    } else if (cars) {
+      setNewCars((prev) => [...prev, ...cars]);
+    }
+  }, [cars, query]);
 
   const addFavorite = (id) => {
     const carToAdd = newCars.find((car) => car.id === id);
@@ -26,19 +29,10 @@ const Catalog = ({ query }) => {
     }
   };
 
-  const filteredCars = useMemo(() => {
-    if (query === "") return newCars;
-
-    return newCars.filter(({ make }) =>
-      make.toLowerCase().includes(query.toLowerCase())
-    );
-  }, [newCars, query]);
-
   const isFavorite = (id) => favorite.some((item) => item.id === id);
-
   return (
     <CatalogList>
-      {filteredCars.map((car) => (
+      {newCars.map((car) => (
         <CatalogItem
           key={car.id}
           car={car}
