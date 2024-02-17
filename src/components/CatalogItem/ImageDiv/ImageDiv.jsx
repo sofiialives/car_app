@@ -12,9 +12,8 @@ const ImageDiv = ({ img, car, remove, add, isFav }) => {
   return (
     <ImageDivStyled>
       <button type="button" onClick={() => handleClick()}>
-        <Icon className="heart-icon" id="heart" active={isFav} />
+        <Icon className={`heart-icon ${isFav ? "active" : ""}`} id="heart" />
       </button>
-
       <img src={img} alt="name" className="image" />
     </ImageDivStyled>
   );

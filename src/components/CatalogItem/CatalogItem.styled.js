@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   width: 100%;
   color: var(--text-white);
   background-color: var(--text-blue);
-  padding: 12px 99.5px;
+  padding: 12px 98.5px;
   border-radius: 12px;
   margin-top: 24px;
   cursor: pointer;
