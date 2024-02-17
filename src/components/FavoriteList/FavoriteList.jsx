@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CatalogItem from "../CatalogItem/CatalogItem";
 import { CatalogList } from "../CatalogList/Catalog.styled";
+import { useFavorite } from "../utils/useFavorite";
 
 const FavoriteList = () => {
-  const [favorite, setFavorite] = useState(
-    () => JSON.parse(localStorage.getItem("favorite")) ?? []
-  );
+  const storedFavorite = localStorage.getItem("favorite");
+  const initialFavorite = storedFavorite ? JSON.parse(storedFavorite) : [];
 
-  useEffect(() => {
-    localStorage.setItem("favorite", JSON.stringify(favorite));
-  }, [favorite]);
-
-  const removeFavorite = (id) => {
-    setFavorite((prev) => prev.filter((item) => item.id !== id));
-  };
+  const { favorite, removeFavorite } = useFavorite(initialFavorite);
 
   const isFavorite = (id) => favorite.some((item) => item.id === id);
   return (

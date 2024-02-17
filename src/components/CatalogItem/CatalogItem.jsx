@@ -4,33 +4,26 @@ import CarsList from "./CarsList/CarsList";
 import { StyledButton } from "./CatalogItem.styled";
 import Modal from "../Modal/Modal";
 import CatalogModal from "../CatalogModal/CatalogModal";
-import DescrCar from "./DescrCar/DescrCar";
+import { shorterFunction, splittedAdress } from "../utils/catalogCars";
+import Description from "../Description/Description";
 
 const CatalogItem = ({ car, isFav, add, remove }) => {
   const [visible, setVisible] = useState(false);
-  const splitted = car.address.split(",");
-  const city = splitted[1];
-  const country = splitted[2];
-  const functional = car.functionalities.map((item) => {
-    const [firstWord, lastWord] = item.split(" ").slice(-2);
-    return `${firstWord.charAt(0).toUpperCase()}${firstWord.slice(
-      1
-    )} ${lastWord}`;
-  });
-  const accessory = car.accessories.map((item) => {
-    const words = item.split(" ");
 
-    if (words.length === 1) {
-      return item;
-    }
+  const city = splittedAdress(car, 1);
+  const country = splittedAdress(car, 2);
 
-    const [firstWord, lastWord] = words.slice(-2);
-    return `${firstWord.charAt(0).toUpperCase()}${firstWord.slice(
-      1
-    )} ${lastWord}`;
-  });
-  const rental = car.rentalConditions.split("\n");
+  const functional = shorterFunction(car.functionalities);
 
+  const catalogItemArray = [
+    city,
+    country,
+    car.rentalCompany,
+    car.type,
+    car.model,
+    car.id,
+    functional[0],
+  ];
   return (
     <li>
       <ImageDiv
@@ -41,12 +34,7 @@ const CatalogItem = ({ car, isFav, add, remove }) => {
         isFav={isFav}
       />
       <CarsList car={car} />
-      <DescrCar
-        city={city}
-        country={country}
-        car={car}
-        functional={functional}
-      />
+      <Description array={catalogItemArray} />
       <StyledButton type="button" onClick={() => setVisible(true)}>
         Learn more
       </StyledButton>
@@ -57,9 +45,7 @@ const CatalogItem = ({ car, isFav, add, remove }) => {
             car={car}
             country={country}
             city={city}
-            accessory={accessory}
             functional={functional}
-            rental={rental}
           />
         </Modal>
       )}

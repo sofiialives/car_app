@@ -3,11 +3,14 @@ import { useSelector } from "react-redux";
 import { selectCars } from "../../services/cars/selectors";
 import CatalogItem from "../CatalogItem/CatalogItem";
 import { CatalogList } from "./Catalog.styled";
+import { useFavorite } from "../utils/useFavorite";
 
 const Catalog = () => {
-  const [favorite, setFavorite] = useState(
-    () => JSON.parse(localStorage.getItem("favorite")) ?? []
-  );
+  const storedFavorite = localStorage.getItem("favorite");
+  const initialFavorite = storedFavorite ? JSON.parse(storedFavorite) : [];
+  const { favorite, removeFavorite, setFavorite } =
+    useFavorite(initialFavorite);
+
   const cars = useSelector(selectCars);
   const [newCars, setNewCars] = useState([]);
 
@@ -15,19 +18,11 @@ const Catalog = () => {
     setNewCars((prev) => [...prev, ...cars]);
   }, [cars]);
 
-  useEffect(() => {
-    localStorage.setItem("favorite", JSON.stringify(favorite));
-  }, [favorite]);
-
   const addFavorite = (id) => {
     const carToAdd = newCars.find((car) => car.id === id);
     if (carToAdd) {
       setFavorite((prevFavorite) => [...prevFavorite, carToAdd]);
     }
-  };
-  
-  const removeFavorite = (id) => {
-    setFavorite((prev) => prev.filter((item) => item.id !== id));
   };
 
   const isFavorite = (id) => favorite.some((item) => item.id === id);
