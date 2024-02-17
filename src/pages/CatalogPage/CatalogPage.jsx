@@ -8,6 +8,7 @@ import { selectCars } from "../../services/cars/selectors";
 import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 
 const CatalogPage = () => {
+  const cars = useSelector(selectCars);
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
 
@@ -19,7 +20,6 @@ const CatalogPage = () => {
     dispatch(getCars(page));
   }, [dispatch, page]);
 
-  const cars = useSelector(selectCars);
   const endPage = cars.length > 0;
   return (
     <CatalogWrapper className="main-container">
