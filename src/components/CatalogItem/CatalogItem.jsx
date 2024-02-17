@@ -4,7 +4,7 @@ import CarsList from "./CarsList/CarsList";
 import { StyledButton } from "./CatalogItem.styled";
 import Modal from "../Modal/Modal";
 import CatalogModal from "../CatalogModal/CatalogModal";
-import { shorterFunction, splittedAdress } from "../utils/catalogCars";
+import { shorterFunction, splittedAdress } from "../../utils/catalogCars";
 import Description from "../Description/Description";
 
 const CatalogItem = ({ car, isFav, add, remove }) => {

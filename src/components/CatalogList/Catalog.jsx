@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { selectCars } from "../../services/cars/selectors";
 import CatalogItem from "../CatalogItem/CatalogItem";
 import { CatalogList } from "./Catalog.styled";
-import { useFavorite } from "../utils/useFavorite";
+import { useFavorite } from "../../utils/useFavorite";
 
 const Catalog = () => {
   const storedFavorite = localStorage.getItem("favorite");

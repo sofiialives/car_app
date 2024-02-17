@@ -1,7 +1,7 @@
 import React from "react";
 import CatalogItem from "../CatalogItem/CatalogItem";
 import { CatalogList } from "../CatalogList/Catalog.styled";
-import { useFavorite } from "../utils/useFavorite";
+import { useFavorite } from "../../utils/useFavorite";
 
 const FavoriteList = () => {
   const storedFavorite = localStorage.getItem("favorite");

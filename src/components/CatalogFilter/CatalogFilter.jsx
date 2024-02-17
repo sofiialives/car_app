@@ -1,9 +1,15 @@
 import React from "react";
-import { marks } from "../utils/catalogFilter";
+import { marks } from "../../utils/catalogFilter";
+import {
+  FormStyled,
+  InputStyled,
+  LabelStyled,
+  SelectorStyled,
+} from "./CatalogFilter.styled";
 
 const CatalogFilter = ({ setMarks }) => {
   const makeOptions = marks.map((car, index) => (
-    <option key={index} value={car}>
+    <option key={index} value={car} className="car-option">
       {car}
     </option>
   ));
@@ -14,24 +20,26 @@ const CatalogFilter = ({ setMarks }) => {
     setMarks(selectedMake);
   };
   return (
-    <form onSubmit={handleSearch}>
-      <label>
-        Car brand
-        <select name="make">{makeOptions}</select>
-      </label>
-      {/* <label>
-        Price/ 1 hour
-        <select>
-          <option value="">To </option>
-        </select>
-      </label>
-      <label>
-        Сar mileage / km
-        <input type="text" />
-        <input type="text" />
-      </label> */}
-      <button type="submit">Search</button>
-    </form>
+    <FormStyled onSubmit={handleSearch}>
+      <LabelStyled>
+        <p>Car brand</p>
+        <SelectorStyled name="make">{makeOptions}</SelectorStyled>
+      </LabelStyled>
+      <LabelStyled>
+        <p>Price/ 1 hour</p>
+        <SelectorStyled className="input-no-border-radius">
+          <option value="">To $</option>
+        </SelectorStyled>
+      </LabelStyled>
+      <LabelStyled>
+        <p>Car mileage / km</p>
+        <InputStyled type="text" placeholder="From" />
+        <InputStyled type="text" placeholder="To" className="input-left" />
+      </LabelStyled>
+      <button type="submit" className="button">
+        Search
+      </button>
+    </FormStyled>
   );
 };
 
