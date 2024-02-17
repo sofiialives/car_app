@@ -36,7 +36,8 @@ export const GlobalStyle = createGlobalStyle`
       --input-color: #F7F7FB;
       --border-line: rgba(18, 20, 23, 0.1);
       --button-color: #F9F9F9;
-      --condition-color: #363535
+      --condition-color: #363535;
+      --input-stick: rgba(138, 138, 137, 0.2)
 }
 /* RESET STYLES */
 a {

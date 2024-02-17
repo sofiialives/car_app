@@ -2,7 +2,7 @@ import React from "react";
 import { ModalSection, RentalBtn } from "./CatalogModal.styled";
 import FirstBlock from "./FirstBlock/FirstBlock";
 import SecondBlock from "./SecondBlock/SecondBlock";
-import { shorterFunction } from "../utils/catalogCars";
+import { shorterFunction } from "../../utils/catalogCars";
 
 const CatalogModal = ({ car, country, city, functional }) => {
   const rental = car.rentalConditions.split("\n");

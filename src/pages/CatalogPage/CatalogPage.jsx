@@ -5,6 +5,7 @@ import { getCars } from "../../services/cars/operations";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import { CatalogWrapper } from "./CatalogPage.styled";
 import { selectCars } from "../../services/cars/selectors";
+import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
@@ -22,6 +23,7 @@ const CatalogPage = () => {
   const endPage = cars.length > 0;
   return (
     <CatalogWrapper className="main-container">
+      <CatalogFilter />
       <Catalog />
       {endPage && <LoadMore handleClick={handleClick} />}
     </CatalogWrapper>
