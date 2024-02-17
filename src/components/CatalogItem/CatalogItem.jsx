@@ -25,7 +25,7 @@ const CatalogItem = ({ car, isFav, add, remove }) => {
     functional[0],
   ];
   return (
-    <li>
+    <li style={{ width: "274px" }}>
       <ImageDiv
         img={car.img}
         car={car}
