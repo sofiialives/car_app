@@ -8,6 +8,7 @@ import {
 } from "./CatalogFilter.styled";
 
 const CatalogFilter = ({ setMarks }) => {
+  
   const makeOptions = marks.map((car, index) => (
     <option key={index} value={car} className="car-option">
       {car}
