@@ -5,6 +5,7 @@ const initialState = {
   items: [],
   isLoading: false,
   error: null,
+  filter: "",
 };
 
 const handlePending = (state) => {
@@ -21,8 +22,8 @@ const carsSlice = createSlice({
   name: "cars",
   initialState,
   reducers: {
-    setCars: (state, action) => {
-      state.items = action.payload;
+    setFilter: (state, action) => {
+      state.filter = action.payload;
     },
   },
   extraReducers: (builder) =>
@@ -36,5 +37,5 @@ const carsSlice = createSlice({
       .addCase(getCars.rejected, handleRejected),
 });
 
-export const { setCars } = carsSlice.actions;
+export const { setFilter } = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;

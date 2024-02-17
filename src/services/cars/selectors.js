@@ -10,3 +10,5 @@ export const selectIsLoading = createSelector(
 );
 
 export const selectError = createSelector(allSelectors, (cars) => cars.error);
+
+export const selectFilter = createSelector(allSelectors, (cars) => cars.filter);
