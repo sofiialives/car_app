@@ -13,6 +13,11 @@ const CatalogPage = () => {
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
 
+  const handleMarks = (selected) => {
+    const filtered = cars?.filter((item) => item.make === selected);
+    setMarks(filtered);
+  };
+
   const handleClick = () => {
     setPage((prev) => prev + 1);
   };
@@ -26,6 +31,7 @@ const CatalogPage = () => {
     <CatalogWrapper className="main-container">
       <CatalogFilter setQuery={setQuery} />
       <Catalog query={query} />
+
       {endPage && <LoadMore handleClick={handleClick} />}
     </CatalogWrapper>
   );

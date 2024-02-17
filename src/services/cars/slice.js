@@ -21,11 +21,7 @@ const handleRejected = (state, action) => {
 const carsSlice = createSlice({
   name: "cars",
   initialState,
-  reducers: {
-    setFilter: (state, action) => {
-      state.filter = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) =>
     builder
       .addCase(getCars.pending, handlePending)
