@@ -1,21 +1,37 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
+import { NavListStyled, NavStyled } from "./Header.styled";
 
 const Header = () => {
+  const location = useLocation();
+
+  const routes = [
+    { route: "/", name: "Home" },
+    { route: "/catalog", name: "Catalog" },
+    { route: "/favorites", name: "Favorites" },
+  ];
+
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/catalog">Catalog</NavLink>
-        </li>
-        <li>
-          <NavLink to="/favorites">Favorites</NavLink>
-        </li>
-      </ul>
-    </nav>
+    <NavStyled className="container">
+      <NavLink to="/">
+        <img src={logo} alt="logo" width={150} />
+      </NavLink>
+      <NavListStyled>
+        {routes.map((item, index) => (
+          <li key={index}>
+            <NavLink
+              to={item.route}
+              className={`link ${
+                location.pathname === `${item.route}` ? "active" : ""
+              }`}
+            >
+              {item.name}
+            </NavLink>
+          </li>
+        ))}
+      </NavListStyled>
+    </NavStyled>
   );
 };
 

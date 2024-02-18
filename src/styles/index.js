@@ -91,6 +91,6 @@ body {
 }
 
 .main-container{
-  margin: 150px 128px;
+  margin: 60px 128px 150px;
 }
 `;
