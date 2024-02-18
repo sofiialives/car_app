@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+## Опис проєкту
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Цей репозиторій є частиною технічного завдання від GoIT для розробки веб-сайту з системою аренди автомобілів на годину. Сайт пропонує функціонал, який дозволяє користувачам здійснювати пошук і оренду машин за годину в зручний спосіб.
 
-## Available Scripts
+## Основний функціонал:
 
-In the project directory, you can run:
+- **Фільтрація за маркою машини:** Користувачі можуть вибирати автомобілі за їхньою маркою, забезпечуючи зручний і швидкий пошук.
+
+- **Оренда автомобілів:** Система дозволяє користувачам орендовувати автомобілі на годину. Механізм бронювання та підтвердження робить процес простим і безпечним.
+
+- **Зв'язок із сервісом:** Сайт надає можливість зв'язку з обслуговуючим персоналом чи службою підтримки для вирішення питань та отримання додаткової інформації.
+
+## Вимоги до середовища
+
+- **React**
+- **Axios**
+- **react-router-dom**
+- **react-loader-spiner**
+- **axios**
+- **react-redux**
+- **redux-persistor**
+- **styled-components**
+- **web-vitals**
+
+## Інструкції з встановлення
+
+В директорії проекту виконайте наступні команди:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Запускає додаток у режимі розробки.\
+Відкрийте [http://localhost:3000/car_app/](http://localhost:3000/car_app/), щоб переглянути його в браузері.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Сторінка буде перезавантажена при внесенні змін.\
+Ви також можете переглядати будь-які помилки лінтингу в консолі.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Запускає тестовий ранер у інтерактивному режимі перегляду.\
+Див. розділ про [запуск тестів](https://facebook.github.io/create-react-app/docs/running-tests) для отримання додаткової інформації.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Збирає додаток для продакшену в папку `build`.\
+Це правильно упаковує React у режимі продакшену і оптимізує збірку для найкращої продуктивності.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Збірка мініфікується, імена файлів включають хеші.\
+Ваш додаток готовий до розгортання!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Див. розділ про [розгортання](https://facebook.github.io/create-react-app/docs/deployment) для отримання додаткової інформації.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Примітка: це одноразова операція. Після викидання ви не можете повернутися назад!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Якщо ви не впевнені у засобі збірки та вибору конфігурацій, ви можете виконати викидання в будь-який момент. Ця команда вилучить єдину залежність збірки з вашого проекту.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Замість цього вона скопіює всі файли конфігурації та транзитивні залежності (webpack, Babel, ESLint та ін.) прямо в ваш проект, щоб ви мали повний контроль над ними. Всі команди, за винятком `eject`, все ще працюватимуть, але вони будуть посилатися на скопійовані сценарії, щоб ви могли їх налаштувати. З цього моменту ви вже на самоті.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Вам не обов'язково використовувати `eject`. Кураторський набір функцій підходить для невеликих та середніх розгортань, і вам не слід відчувати обов'язковість використовувати цю функцію. Однак ми розуміємо, що цей інструмент не був би корисним, якщо ви не могли б його налаштувати, коли ви для цього готові.
 
-## Learn More
+## Дізнайте більше
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Дізнайтеся більше в документації [Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Щоб дізнатися React, відвідайте документацію [React](https://reactjs.org/).
 
-### Code Splitting
+### Розгортання
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Цей розділ переїхав сюди: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

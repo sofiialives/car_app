@@ -30,7 +30,6 @@ export const BenefitItemStyled = styled.li`
     color: var(--text-black);
     font-size: 18px;
     font-weight: 500;
-    font-family: var(--main-font-medium);
   }
 `;
 

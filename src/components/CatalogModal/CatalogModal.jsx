@@ -29,7 +29,7 @@ const CatalogModal = ({ car, country, city, functional }) => {
         array={conditionArray}
         isTrue={true}
       />
-      <RentalBtn type="button">Rental car</RentalBtn>
+      <RentalBtn href="tel:+380730000000">Rental car</RentalBtn>
     </ModalSection>
   );
 };

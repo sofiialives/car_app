@@ -8,9 +8,6 @@ export const GlobalStyle = createGlobalStyle`
      /* FONTS */
      --font-size: 12px;
      --line-height: 1.5;
-     --main-font-semi: ${ManropeSemiBold};
-     --main-font-medium: ${ManropeMedium};
-     --main-font-bold: ${ManropeBold};
 
       /* COLORS */
       --text-color: rgba(18, 20, 23, 0.5);
@@ -99,16 +96,16 @@ body {
 }
 
 .main-container{
-  margin: 60px 128px 60px;
+  padding: 50px 128px ;
 
 }
 .container{
-  margin: 0 128px;
+  padding: 0 128px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .section{
-  padding: 80px 0;
+  padding: 50px 0;
 }
 `;

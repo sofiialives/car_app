@@ -27,12 +27,10 @@ export const ClientsWrapper = styled.div`
     font-size: 48px;
     line-height: 125.5%;
     margin-bottom: 20px;
-    font-family: var(--main-font-bold);
   }
 
   .dscr-span {
     color: var(--text-blue);
-    font-family: var(--main-font-medium);
   }
 `;
 
@@ -60,7 +58,6 @@ export const ListItem = styled.li`
     font-weight: 700;
     color: var(--text-black);
     font-weight: 600;
-    font-family: var(--main-font-semibold);
   }
 
   .img {

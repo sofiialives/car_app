@@ -26,24 +26,20 @@ export const AdvantageWrapper = styled.div`
     font-size: 48px;
     line-height: 125.5%;
     margin-bottom: 20px;
-    font-family: var(--main-font-bold);
   }
 
   .dscr-span {
     color: var(--text-blue);
-    font-family: var(--main-font-medium);
   }
 
   p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
-    font-family: var(--main-font-medium);
   }
 
   .dscr-button {
     align-self: flex-end;
-    font-family: var(--main-font-semi);
     line-height: 1.4;
     font-weight: 600;
     padding: 14px 44px;

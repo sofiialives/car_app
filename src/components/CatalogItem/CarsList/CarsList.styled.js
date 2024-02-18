@@ -11,7 +11,6 @@ export const CarsListStyled = styled.div`
   .text {
     font-size: 16px;
     font-weight: 500;
-    font-family: var(--main-font-medium);
     color: var(--text-black);
   }
 
