@@ -12,13 +12,13 @@ const Catalog = ({ query, cars }) => {
     useFavorite(initialFavorite);
 
   useEffect(() => {
-    if (cars && query !== "") {
+    if (query === "All" || !query) {
+      setNewCars(cars || []);
+    } else {
       const filteredCars = cars.filter(({ make }) =>
         make.toLowerCase().includes(query.toLowerCase())
       );
       setNewCars(filteredCars);
-    } else if (cars) {
-      setNewCars((prev) => [...prev, ...cars]);
     }
   }, [cars, query]);
 

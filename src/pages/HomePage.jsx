@@ -1,11 +1,19 @@
-import React from 'react'
+import AboutUs from "components/Home/AboutUs/AboutUs";
+import Clients from "components/Home/Clients/Clients";
+import HomeVideo from "components/Home/Video/HomeVideo";
+import React from "react";
 
 const HomePage = () => {
   return (
-    <div>
-      Welcome 
-    </div>
-  )
-}
+    <section className="main-container">
+      <div>
+        <HomeVideo />
+      </div>
 
-export default HomePage
+      <AboutUs />
+      <Clients />
+    </section>
+  );
+};
+
+export default HomePage;

@@ -12,20 +12,6 @@ export const GlobalStyle = createGlobalStyle`
      --main-font-medium: ${ManropeMedium};
      --main-font-bold: ${ManropeBold};
 
-
-     @font-face {
-         font-family: 'Manrope-Bold', sans-serif;
-         src: url(${ManropeBold}) format('truetype'),
-     }
-     @font-face {
-         font-family: 'Manrope-SemiBold', sans-serif;
-         src: url(${ManropeSemiBold}) format('truetype'),
-     }
-     @font-face {
-         font-family: 'Manrope-Medium', sans-serif;
-         src: url(${ManropeMedium}) format('truetype'),
-     }
-
       /* COLORS */
       --text-color: rgba(18, 20, 23, 0.5);
       --text-black: #121417;
@@ -39,6 +25,18 @@ export const GlobalStyle = createGlobalStyle`
       --condition-color: #363535;
       --input-stick: rgba(138, 138, 137, 0.2)
 }
+    @font-face {
+         font-family: 'Manrope-Bold', sans-serif;
+         src: url(${ManropeBold}) format('truetype'),
+     }
+     @font-face {
+         font-family: 'Manrope-SemiBold', sans-serif;
+         src: url(${ManropeSemiBold}) format('truetype'),
+     }
+     @font-face {
+         font-family: 'Manrope-Medium', sans-serif;
+         src: url(${ManropeMedium}) format('truetype'),
+     }
 /* RESET STYLES */
 a {
   text-decoration: none;
@@ -76,6 +74,16 @@ p {
   margin: 0;
 }
 
+main{
+  flex-grow: 1;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
  /* STANDART STYLES */
 body {
     margin: 0;
@@ -91,6 +99,16 @@ body {
 }
 
 .main-container{
-  margin: 60px 128px 150px;
+  margin: 60px 128px 60px;
+
+}
+.container{
+  margin: 0 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section{
+  padding: 80px 0;
 }
 `;

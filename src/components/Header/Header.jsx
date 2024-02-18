@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-import { NavListStyled, NavStyled } from "./Header.styled";
+import { NavListStyled } from "./Header.styled";
 
 const Header = () => {
   const location = useLocation();
@@ -13,9 +13,9 @@ const Header = () => {
   ];
 
   return (
-    <NavStyled className="container">
+    <nav className="container">
       <NavLink to="/">
-        <img src={logo} alt="logo" width={150} />
+        <img src={logo} alt="logo" width={130} />
       </NavLink>
       <NavListStyled>
         {routes.map((item, index) => (
@@ -31,7 +31,7 @@ const Header = () => {
           </li>
         ))}
       </NavListStyled>
-    </NavStyled>
+    </nav>
   );
 };
 

@@ -1,4 +1,5 @@
 export const marks = [
+  "All",
   "Buick",
   "Volvo",
   "HUMMER",

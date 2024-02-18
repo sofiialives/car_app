@@ -35,7 +35,7 @@ const CatalogFilter = ({ setQuery }) => {
           name="make"
           defaultValue={localStorage.getItem("selector") || ""}
         >
-          <option value="" className="car-option">
+          <option className="car-option" disabled selected>
             Enter the text
           </option>
           {makeOptions}
@@ -44,7 +44,7 @@ const CatalogFilter = ({ setQuery }) => {
       <LabelStyled>
         <p>Price / 1 hour</p>
         <SelectorStyled>
-          <option value="" className="car-option">
+          <option className="car-option" disabled selected>
             To $
           </option>
           {priceOptions}
