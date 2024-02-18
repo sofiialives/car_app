@@ -13,7 +13,6 @@ export const Backdrop = styled.div`
 
 export const ModalContent = styled.div`
   width: 541px;
-  height: 752px;
   position: absolute;
   top: 50%;
   left: 50%;
