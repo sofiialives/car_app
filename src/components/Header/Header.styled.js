@@ -11,7 +11,6 @@ export const NavListStyled = styled.ul`
     .link {
       font-size: 20px;
       font-weight: 700;
-      font-family: var(--main-font-bold);
       color: var(--text-blue);
       position: relative;
 

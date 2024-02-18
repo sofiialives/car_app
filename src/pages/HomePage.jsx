@@ -6,10 +6,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <section className="main-container">
-      <div>
-        <HomeVideo />
-      </div>
-
+      <HomeVideo />
       <AboutUs />
       <Clients />
     </section>

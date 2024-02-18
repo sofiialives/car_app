@@ -5,10 +5,8 @@ export const FormStyled = styled.form`
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 50px;
   .button {
     align-self: flex-end;
-    font-family: var(--main-font-semi);
     line-height: 1.4;
     font-weight: 600;
     padding: 14px 44px;
@@ -47,7 +45,6 @@ export const SelectorStyled = styled.select`
 `;
 
 export const LabelStyled = styled.label`
-  font-family: var(--main-font-medium);
   line-height: 1.3;
   font-weight: 500;
   color: var(--text-grey);

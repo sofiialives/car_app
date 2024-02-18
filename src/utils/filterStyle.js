@@ -1,5 +1,4 @@
 export const commonStyles = `
-  font-family: var(--main-font-medium);
   line-height: 1.1;
   font-weight: 500;
   background-color: var(--input-color);

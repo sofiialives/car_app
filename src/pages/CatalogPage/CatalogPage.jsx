@@ -8,6 +8,7 @@ import { selectCars } from "../../services/cars/selectors";
 import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 
 const CatalogPage = () => {
+  const [loadMore, setLoadMore] = useState(false);
   const [query, setQuery] = useState(() => {
     return localStorage.getItem("query") || "";
   });
@@ -20,17 +21,28 @@ const CatalogPage = () => {
   };
 
   useEffect(() => {
+    if (cars.length === 0 || query) {
+      setLoadMore(false);
+    } else {
+      setLoadMore(true);
+    }
+
+    if (query === "All") {
+      setLoadMore(true);
+    }
+  }, [cars, query]);
+
+  useEffect(() => {
     const newQuery = query === "All" ? "" : query;
     localStorage.setItem("query", newQuery);
     dispatch(getCars({ query: newQuery, page }));
   }, [dispatch, page, query]);
 
-  const endPage = cars.length > 0;
   return (
     <CatalogWrapper className="main-container">
       <CatalogFilter setQuery={setQuery} />
       <Catalog query={query} cars={cars} />
-      {endPage && <LoadMore handleClick={handleClick} />}
+      {loadMore && <LoadMore handleClick={handleClick} />}
     </CatalogWrapper>
   );
 };

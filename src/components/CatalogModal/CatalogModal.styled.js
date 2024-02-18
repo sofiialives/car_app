@@ -16,7 +16,6 @@ export const ModalSection = styled.div`
     font-size: 18px;
     line-height: 1.3;
     font-weight: 500;
-    font-family: var(--main-font-medium);
     color: var(--text-black);
   }
 
@@ -38,14 +37,15 @@ export const ModalSection = styled.div`
       font-size: 14px;
       line-height: 1.4;
       font-weight: 500;
-      font-family: var(--main-font-medium);
       color: var(--text-black);
     }
   }
 `;
 
-export const RentalBtn = styled.button`
-  font-family: var(--main-font-semi);
+export const RentalBtn = styled.a`
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
   font-size: 14px;
   line-height: 1.4;
   font-weight: 600;

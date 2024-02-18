@@ -22,8 +22,9 @@ export const TitleOverlay = styled.h1`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 48px;
+  color: var(--text-white);
+  font-size: 38px;
+  font-weight: 700;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -31,7 +32,7 @@ export const TitleOverlay = styled.h1`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  background: linear-gradient(to right, #00bfff, #00fa9a);
+  background: linear-gradient(to right, #3470ff, #00bfff, #00fa9a);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
