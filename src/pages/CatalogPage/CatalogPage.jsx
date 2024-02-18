@@ -20,8 +20,9 @@ const CatalogPage = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("query", query);
-    dispatch(getCars({ query, page }));
+    const newQuery = query === "All" ? "" : query;
+    localStorage.setItem("query", newQuery);
+    dispatch(getCars({ query: newQuery, page }));
   }, [dispatch, page, query]);
 
   const endPage = cars.length > 0;

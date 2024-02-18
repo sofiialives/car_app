@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const NavStyled = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &.container {
-    margin: 0 128px;
-  }
-`;
-
 export const NavListStyled = styled.ul`
   display: flex;
   margin-left: auto;
