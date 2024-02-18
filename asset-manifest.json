@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/car_app/static/css/main.e6c13ad2.css",
-    "main.js": "/car_app/static/js/main.9731f620.js",
-    "static/js/532.03db7cda.chunk.js": "/car_app/static/js/532.03db7cda.chunk.js",
-    "static/js/800.bdef7079.chunk.js": "/car_app/static/js/800.bdef7079.chunk.js",
-    "static/js/512.f4691ec1.chunk.js": "/car_app/static/js/512.f4691ec1.chunk.js",
+    "main.js": "/car_app/static/js/main.d58841d6.js",
+    "static/js/516.e8ae8059.chunk.js": "/car_app/static/js/516.e8ae8059.chunk.js",
+    "static/js/800.8fa0f0f7.chunk.js": "/car_app/static/js/800.8fa0f0f7.chunk.js",
+    "static/js/512.4ff1fdaf.chunk.js": "/car_app/static/js/512.4ff1fdaf.chunk.js",
+    "static/media/background.mp4": "/car_app/static/media/background.daacb2b43583f82c14f7.mp4",
     "static/media/header-bg.png": "/car_app/static/media/header-bg.7062c8391ed711422104.png",
     "static/media/Manrope-SemiBold.ttf": "/car_app/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
     "static/media/Manrope-Medium.ttf": "/car_app/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Bold.ttf": "/car_app/static/media/Manrope-Bold.47f6d7143da9d8c0e480.ttf",
     "static/media/logo.png": "/car_app/static/media/logo.e473f50573084d7908f8.png",
-    "static/media/icons.svg": "/car_app/static/media/icons.2d09a50f6e0055153ecbf3cd0538acd3.svg",
+    "static/media/icons.svg": "/car_app/static/media/icons.a7570e780f4459e50f1fb9eace056259.svg",
     "index.html": "/car_app/index.html",
     "main.e6c13ad2.css.map": "/car_app/static/css/main.e6c13ad2.css.map",
-    "main.9731f620.js.map": "/car_app/static/js/main.9731f620.js.map",
-    "532.03db7cda.chunk.js.map": "/car_app/static/js/532.03db7cda.chunk.js.map",
-    "800.bdef7079.chunk.js.map": "/car_app/static/js/800.bdef7079.chunk.js.map",
-    "512.f4691ec1.chunk.js.map": "/car_app/static/js/512.f4691ec1.chunk.js.map"
+    "main.d58841d6.js.map": "/car_app/static/js/main.d58841d6.js.map",
+    "516.e8ae8059.chunk.js.map": "/car_app/static/js/516.e8ae8059.chunk.js.map",
+    "800.8fa0f0f7.chunk.js.map": "/car_app/static/js/800.8fa0f0f7.chunk.js.map",
+    "512.4ff1fdaf.chunk.js.map": "/car_app/static/js/512.4ff1fdaf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.9731f620.js"
+    "static/js/main.d58841d6.js"
   ]
 }
